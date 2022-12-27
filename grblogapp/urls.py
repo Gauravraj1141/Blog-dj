@@ -15,7 +15,4 @@ urlpatterns = [
     path("update/<int:id>/", views.User_Update_blog, name="update"),
     path("delete/<int:id>/", views.User_Delete_blog, name="delete"),
 
-]
-
-urlpatterns += static(settings.MEDIA_URL, document_root=settings.MEDIA_ROOT)
-urlpatterns += static(settings.STATIC_URL, document_root=settings.STATIC_ROOT)
+] + static(settings.STATIC_URL, document_root=settings.STATIC_ROOT)
