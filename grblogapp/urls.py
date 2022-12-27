@@ -1,6 +1,5 @@
 from django.urls import path, include
-from django.conf import settings
-from django.conf.urls.static import static
+
 from . import views
 
 
@@ -15,4 +14,4 @@ urlpatterns = [
     path("update/<int:id>/", views.User_Update_blog, name="update"),
     path("delete/<int:id>/", views.User_Delete_blog, name="delete"),
 
-] + static(settings.STATIC_URL, document_root=settings.STATIC_ROOT)
+]
